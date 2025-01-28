@@ -5,10 +5,15 @@
     margin: 10px 0px;
     
     }
+.card:hover{
+   box-shadow: 1px 0px 15px 0px;
+}
+
 .card img{
     padding-top: 20px;
     height: 200px;
 }
+
 .card-title{
     text-wrap: wrap;
     height: 50px;
@@ -17,4 +22,15 @@
 }
 .card-body{
     justify-content: space-between;
+}
+.contain{
+    padding: 20px 40px;
+    margin-top: 15px;
+}
+.contain:hover{
+ box-shadow: 2px 1px 100px 1px;
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.562);
+   
 }

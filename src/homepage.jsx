@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Cards from "./component";
 import { Button, Container } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
+import './style/style.css'
 
 
 
@@ -29,21 +30,21 @@ function Homepage(){
 
     return(
         <> 
-         <Nav fill variant="tabs" defaultActiveKey="/home" style={{height:'70px', display:'flex', flexDirection:'row', textAlign:'center',alignItems:'center'}} >
+         <Nav fill variant="" className="navbar" defaultActiveKey="/home" style={{height:'70px', display:'flex', flexDirection:'row', textAlign:'center',alignItems:'center'}} >
       <Nav.Item  >
-        <Nav.Link style={{fontSize:'30px'}} href="/home">FakeStore</Nav.Link>
+        <Nav.Link  style={{fontSize:'30px', color:'white'}} href="/home">FakeStore</Nav.Link>
       </Nav.Item>
       <Form inline>
         <Row>
-          <Col xs="auto">
+          <Col xs="auto"  style={{paddingRight:'0px'}}>
             <Form.Control
               type="text"
               placeholder="Search"
               className=" mr-sm-2"
             />
           </Col>
-          <Col xs="auto">
-            <Button type="submit" variant="success">Submit</Button>
+          <Col xs="auto" style={{paddingLeft:'0px', marginRight:'10px'}}>
+            <Button  type="submit" variant="success">Submit</Button>
           </Col>
         </Row>
       </Form>
@@ -54,14 +55,14 @@ function Homepage(){
         
         
         
-         <Container>
+         <Container className="contain">
                 <Row>
             {products.map((product,index)=>{
                 
                 return(
                     
                 
-                <Col key={product.id} xs={12} sm={6} md={4} lg={4} xl={3} style={{padding:'0px 5px'}}>
+                <Col className="column" key={product.id} xs={12} sm={6} md={4} lg={4} xl={3} style={{padding:'0px 5px'}}>
                     <Cards product={product}/>
 
                     </Col>
